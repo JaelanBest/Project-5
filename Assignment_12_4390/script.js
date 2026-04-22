@@ -574,6 +574,71 @@ function setupPostForm() {
   });
 }
 
+function setupCategoryFilter() {
+  const filterDropdown = document.getElementById("categoryFilter");
+  if (!filterDropdown) return;
+
+  filterDropdown.addEventListener("change", (e) => {
+    const category = e.target.value;
+    if (category) {
+      // Filter and show only selected category
+      const categoryCards = document.querySelectorAll(".categories-grid .category-card");
+      categoryCards.forEach(card => {
+        const links = card.querySelectorAll("[data-category]");
+        let hasCategory = false;
+        links.forEach(link => {
+          if (link.dataset.category === category) {
+            hasCategory = true;
+          }
+        });
+        card.style.display = hasCategory ? "block" : "none";
+      });
+      // Scroll to categories
+      document.querySelector(".categories-grid").scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Show all
+      const categoryCards = document.querySelectorAll(".categories-grid .category-card");
+      categoryCards.forEach(card => {
+        card.style.display = "block";
+      });
+    }
+  });
+}
+
+function setupDropdownMenus() {
+  const dropdowns = document.querySelectorAll(".dropdown");
+  
+  dropdowns.forEach(dropdown => {
+    const trigger = dropdown.querySelector(".nav-link");
+    if (!trigger) return;
+
+    // Toggle dropdown on click
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Close all other dropdowns
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+      // Toggle this dropdown
+      dropdown.classList.toggle("open");
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+      dropdowns.forEach(d => d.classList.remove("open"));
+    }
+  });
+
+  // Close dropdowns on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdowns.forEach(d => d.classList.remove("open"));
+    }
+  });
+}
+
 function renderListings(posts) {
   const mainContent = document.querySelector(".main-content");
   if (!mainContent) return;
@@ -638,10 +703,12 @@ setActiveNav();
 setupMenu();
 setupTheme();
 setupCategoryLinks();
+setupCategoryFilter();
+setupDropdownMenus();
 renderHomePage();
 handleSearch();
 renderAccountPage();
-  setupPostForm();
+setupPostForm();
 
 
 

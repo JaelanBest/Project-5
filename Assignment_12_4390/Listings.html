@@ -12,7 +12,7 @@
       <div class="header-container">
         <div class="header-left">
           <a class="logo-link" href="index.html" aria-label="Go to home page">
-            <span class="logo-mark">◔</span>
+            <span class="logo-mark">🏪</span>
             <span class="logo-text">All American Marketplace</span>
           </a>
         </div>
@@ -31,8 +31,17 @@
 
         <div class="header-right">
           <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="categories.html" class="nav-link">Categories</a>
+            <div class="dropdown" id="categoriesDropdown">
+              <a href="categories.html" class="nav-link">Categories</a>
+              <div class="dropdown-menu">
+                <a href="Listings.html?category=Bikes" class="dropdown-item">🚲 Bikes</a>
+                <a href="Listings.html?category=Electronics" class="dropdown-item">💻 Electronics</a>
+                <a href="Listings.html?category=Furniture" class="dropdown-item">🪑 Furniture</a>
+                <a href="Listings.html?category=Books" class="dropdown-item">📚 Books</a>
+                <a href="Listings.html?category=Clothing" class="dropdown-item">👕 Clothing</a>
+                <a href="Listings.html?category=Services" class="dropdown-item">🔧 Services</a>
+              </div>
+            </div>
             <a href="Listings.html" class="nav-link">Listings</a>
             <a href="post.html" class="nav-link">Post</a>
             <a href="account.html" class="nav-link">Account</a>
@@ -138,13 +147,11 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p class="copyright">&copy; 2026 All American Marketplace. All rights reserved.</p>
-          <div class="footer-badges">
-            <span class="badge">🔒 Secure</span>
-            <span class="badge">📱 Mobile Friendly</span>
-            <span class="badge">🌟 Trusted</span>
-          </div>
+        <p class="footer-copyright">&copy; 2026 All American Marketplace. All rights reserved.</p>
+        <div class="footer-links-bottom">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact</a>
         </div>
       </div>
     </div>

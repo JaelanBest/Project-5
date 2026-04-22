@@ -12,7 +12,7 @@
       <div class="header-container">
         <div class="header-left">
           <a class="logo-link" href="index.html" aria-label="Go to home page">
-            <span class="logo-mark">◔</span>
+            <span class="logo-mark">🏪</span>
             <span class="logo-text">All American Marketplace</span>
           </a>
         </div>
@@ -31,8 +31,17 @@
 
         <div class="header-right">
           <nav class="main-nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="categories.html" class="nav-link">Categories</a>
+            <div class="dropdown" id="categoriesDropdown">
+              <a href="categories.html" class="nav-link">Categories</a>
+              <div class="dropdown-menu">
+                <a href="Listings.html?category=Bikes" class="dropdown-item">🚲 Bikes</a>
+                <a href="Listings.html?category=Electronics" class="dropdown-item">💻 Electronics</a>
+                <a href="Listings.html?category=Furniture" class="dropdown-item">🪑 Furniture</a>
+                <a href="Listings.html?category=Books" class="dropdown-item">📚 Books</a>
+                <a href="Listings.html?category=Clothing" class="dropdown-item">👕 Clothing</a>
+                <a href="Listings.html?category=Services" class="dropdown-item">🔧 Services</a>
+              </div>
+            </div>
             <a href="Listings.html" class="nav-link">Listings</a>
             <a href="post.html" class="nav-link">Post</a>
             <a href="account.html" class="nav-link">Account</a>
@@ -89,6 +98,56 @@
   </header>
 
   <main class="app-shell">
+    <!-- Categories Hero Section -->
+    <section class="categories-hero">
+      <div class="categories-hero-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22><defs><pattern id=%22pattern%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22rgba(255,255,255,0.1)%22/></pattern></defs><rect width=%221200%22 height=%22400%22 fill=%22url(%23pattern)%22/></svg>'); opacity: 0.5;"></div>
+        <div class="categories-hero-content">
+          <h1 style="margin: 0; font-size: 3rem; font-weight: 800; color: white; z-index: 10; position: relative;">Browse All Categories</h1>
+          <p style="margin: 1rem 0 0; font-size: 1.2rem; color: rgba(255,255,255,0.9); z-index: 10; position: relative;">Find what you're looking for in our comprehensive marketplace</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filter Dropdown -->
+    <section class="categories-filter-section">
+      <div class="filter-dropdown-wrapper">
+        <label for="categoryFilter" style="margin-right: 1rem; font-weight: 600;">Jump to category:</label>
+        <select id="categoryFilter" class="category-dropdown">
+          <option value="">All Categories</option>
+          <optgroup label="Community">
+            <option value="Activities">Activities</option>
+            <option value="Classes">Classes</option>
+            <option value="Groups">Groups</option>
+          </optgroup>
+          <optgroup label="For Sale">
+            <option value="Bikes">Bikes</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Vehicles">Vehicles</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Books">Books</option>
+          </optgroup>
+          <optgroup label="Services">
+            <option value="Services">Services</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Computer">Computer</option>
+          </optgroup>
+          <optgroup label="Housing">
+            <option value="Apts">Apartments</option>
+            <option value="Office">Office Space</option>
+            <option value="Parking">Parking</option>
+          </optgroup>
+          <optgroup label="Jobs">
+            <option value="Accounting">Accounting</option>
+            <option value="Business">Business</option>
+            <option value="Food">Food</option>
+          </optgroup>
+        </select>
+      </div>
+    </section>
+
     <div class="categories-grid">
   <div class="category-card">
     <h3>Community</h3>
@@ -204,13 +263,11 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p class="copyright">&copy; 2026 All American Marketplace. All rights reserved.</p>
-          <div class="footer-badges">
-            <span class="badge">🔒 Secure</span>
-            <span class="badge">📱 Mobile Friendly</span>
-            <span class="badge">🌟 Trusted</span>
-          </div>
+        <p class="footer-copyright">&copy; 2026 All American Marketplace. All rights reserved.</p>
+        <div class="footer-links-bottom">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact</a>
         </div>
       </div>
     </div>
