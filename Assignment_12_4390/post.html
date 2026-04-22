@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post an Ad | All American Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="post">
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="logo-link" href="index.html" aria-label="Go to home page">
+            <span class="logo-mark">◔</span>
+            <span class="logo-text">All American Marketplace</span>
+          </a>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar">
+            <div class="search-input-group">
+              <input id="searchDesktop" type="text" placeholder="What are you looking for?" class="search-input">
+              <input id="locationDesktop" type="text" placeholder="Location" class="location-input">
+            </div>
+            <button class="search-btn" aria-label="Search">
+              <span class="search-icon">🔍</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="categories.html" class="nav-link">Categories</a>
+            <a href="Listings.html" class="nav-link">Listings</a>
+            <a href="post.html" class="nav-link">Post</a>
+            <a href="account.html" class="nav-link">Account</a>
+          </nav>
+          <button type="button" class="theme-toggle" id="modeToggleDesktop" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+
+        <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="mobile-search">
+          <input id="searchMobile" type="text" placeholder="Search">
+          <input id="locationMobile" type="text" placeholder="Location">
+          <button class="mobile-search-btn">🔍</button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link" data-nav="home">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="categories.html" class="mobile-nav-link" data-nav="categories">
+          <span class="nav-icon">📂</span>
+          <span>Categories</span>
+        </a>
+        <a href="Listings.html" class="mobile-nav-link" data-nav="listings">
+          <span class="nav-icon">📋</span>
+          <span>Listings</span>
+        </a>
+        <a href="post.html" class="mobile-nav-link" data-nav="post">
+          <span class="nav-icon">➕</span>
+          <span>Post</span>
+        </a>
+        <a href="account.html" class="mobile-nav-link" data-nav="account">
+          <span class="nav-icon">👤</span>
+          <span>Account</span>
+        </a>
+        <button type="button" class="mobile-theme-toggle" id="modeToggleMobile">
+          <span class="theme-icon">🌙</span>
+          <span>Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="main-panel single-panel">
+      <div class="figma-box">
+        <h1>Create a Listing</h1>
+        <p class="form-intro">Fill out the details below to post your item or service. All fields are required.</p>
+
+        <form id="postForm" novalidate>
+
+          <div class="form-section">
+            <h2>Basic Information</h2>
+
+            <div class="field-group">
+              <label for="title" class="field-label">
+                <span class="label-text">Title</span>
+                <span class="required">*</span>
+              </label>
+              <input type="text" id="title" name="title" placeholder="e.g. Vintage Trek Mountain Bike" class="form-input">
+              <div class="field-hint">Choose a clear, descriptive title that highlights the key features</div>
+              <div class="error-msg" id="titleError" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="field-group">
+              <label for="location" class="field-label">
+                <span class="label-text">Location</span>
+                <span class="required">*</span>
+              </label>
+              <input type="text" id="location" name="location" placeholder="e.g. Charlotte, NC" class="form-input">
+              <div class="field-hint">Include city and state for better visibility</div>
+              <div class="error-msg" id="locationError" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="field-group">
+              <label for="email" class="field-label">
+                <span class="label-text">Email</span>
+                <span class="required">*</span>
+              </label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" class="form-input">
+              <div class="field-hint">We'll use this to contact you about your listing</div>
+              <div class="error-msg" id="emailError" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Details</h2>
+
+            <div class="field-group">
+              <label for="desc" class="field-label">
+                <span class="label-text">Description</span>
+                <span class="required">*</span>
+              </label>
+              <textarea id="desc" name="desc" placeholder="Provide detailed information about your item or service. Include condition, specifications, price expectations, and any other relevant details that will help buyers understand what you're offering." class="form-textarea" rows="6"></textarea>
+              <div class="field-hint">Minimum 15 characters. Be specific and honest about the item's condition.</div>
+              <div class="error-msg" id="descError" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Photos</h2>
+            <div class="field-group">
+              <label for="imageUpload" class="field-label">
+                <span class="label-text">Upload Photos</span>
+                <span class="optional">(Optional)</span>
+              </label>
+              <div class="file-upload-area">
+                <input type="file" id="imageUpload" name="images" multiple accept="image/*" class="file-input">
+                <div class="upload-placeholder">
+                  <div class="upload-icon">📷</div>
+                  <p>Click to select photos or drag and drop</p>
+                  <small>Maximum 5 photos, 10MB each</small>
+                </div>
+              </div>
+              <div id="preview" class="preview-grid"></div>
+            </div>
+          </div>
+
+          <input type="hidden" id="category" name="category" value="Bikes">
+
+          <div class="form-actions">
+            <div id="error" class="error-message" role="alert" aria-live="assertive"></div>
+            <div id="success" class="success-message hidden" role="status" aria-live="polite"></div>
+
+            <div class="button-group">
+              <button type="button" class="btn-secondary" onclick="window.history.back()">Cancel</button>
+              <button type="submit" id="submitBtn" class="btn-primary" disabled>
+                <span class="btn-text">Post Listing</span>
+                <span class="btn-loading hidden">Posting...</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">All American Marketplace</h3>
+          <p class="footer-description">Your trusted local marketplace for buying, selling, and trading. Connect with your community and discover amazing deals.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="categories.html">Browse Categories</a>
+            <a href="Listings.html">All Listings</a>
+            <a href="post.html">Post an Item</a>
+            <a href="account.html">My Account</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Support</h4>
+          <nav class="footer-nav">
+            <a href="#">Help Center</a>
+            <a href="#">Safety Tips</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Popular Categories</h4>
+          <nav class="footer-nav">
+            <a href="Listings.html?category=Bikes">Bikes</a>
+            <a href="Listings.html?category=Electronics">Electronics</a>
+            <a href="Listings.html?category=Furniture">Furniture</a>
+            <a href="Listings.html?category=Clothing">Clothing</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="copyright">&copy; 2026 All American Marketplace. All rights reserved.</p>
+          <div class="footer-badges">
+            <span class="badge">🔒 Secure</span>
+            <span class="badge">📱 Mobile Friendly</span>
+            <span class="badge">🌟 Trusted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
