@@ -90,71 +90,123 @@
 
   <main class="app-shell">
     <div class="categories-grid">
-  <div class="category-card">
-    <h3>Community</h3>
-    <p class="cat-link" data-category="Activities">Activities</p>
-    <p class="cat-link" data-category="Childcare">Childcare</p>
-    <p class="cat-link" data-category="Classes">Classes</p>
-    <p class="cat-link" data-category="Groups">Groups</p>
-    <p class="cat-link" data-category="News">News</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+      <span class="category-icon">🎉</span>
+      <h3>Community</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Activities">Activities</a>
+      <a class="cat-link" data-category="Childcare">Childcare</a>
+      <a class="cat-link" data-category="Classes">Classes</a>
+      <a class="cat-link" data-category="Groups">Groups</a>
+      <a class="cat-link" data-category="News">News</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>Services</h3>
-    <p class="cat-link" data-category="Automotive">Automotive</p>
-    <p class="cat-link" data-category="Beauty">Beauty</p>
-    <p class="cat-link" data-category="Computer">Computer</p>
-    <p class="cat-link" data-category="Creative">Creative</p>
-    <p class="cat-link" data-category="Legal">Legal</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+      <span class="category-icon">🔧</span>
+      <h3>Services</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Automotive">Automotive</a>
+      <a class="cat-link" data-category="Beauty">Beauty</a>
+      <a class="cat-link" data-category="Computer">Computer</a>
+      <a class="cat-link" data-category="Creative">Creative</a>
+      <a class="cat-link" data-category="Legal">Legal</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>Forums</h3>
-    <p class="cat-link" data-category="Advice">Advice</p>
-    <p class="cat-link" data-category="Gaming">Gaming</p>
-    <p class="cat-link" data-category="Music">Music</p>
-    <p class="cat-link" data-category="Tech">Tech</p>
-    <p class="cat-link" data-category="Travel">Travel</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+      <span class="category-icon">💬</span>
+      <h3>Forums</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Advice">Advice</a>
+      <a class="cat-link" data-category="Gaming">Gaming</a>
+      <a class="cat-link" data-category="Music">Music</a>
+      <a class="cat-link" data-category="Tech">Tech</a>
+      <a class="cat-link" data-category="Travel">Travel</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>Housing</h3>
-    <p class="cat-link" data-category="Apts">Apts</p>
-    <p class="cat-link" data-category="Rooms">Rooms</p>
-    <p class="cat-link" data-category="Office">Office</p>
-    <p class="cat-link" data-category="Parking">Parking</p>
-    <p class="cat-link" data-category="Storage">Storage</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+      <span class="category-icon">🏠</span>
+      <h3>Housing</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Apts">Apts</a>
+      <a class="cat-link" data-category="Rooms">Rooms</a>
+      <a class="cat-link" data-category="Office">Office</a>
+      <a class="cat-link" data-category="Parking">Parking</a>
+      <a class="cat-link" data-category="Storage">Storage</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>For Sale</h3>
-    <p class="cat-link" data-category="Appliances">Appliances</p>
-    <p class="cat-link" data-category="Bikes">Bikes</p>
-    <p class="cat-link" data-category="Electronics">Electronics</p>
-    <p class="cat-link" data-category="Furniture">Furniture</p>
-    <p class="cat-link" data-category="Vehicles">Vehicles</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+      <span class="category-icon">🛍️</span>
+      <h3>For Sale</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Appliances">Appliances</a>
+      <a class="cat-link" data-category="Bikes">Bikes</a>
+      <a class="cat-link" data-category="Electronics">Electronics</a>
+      <a class="cat-link" data-category="Furniture">Furniture</a>
+      <a class="cat-link" data-category="Vehicles">Vehicles</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>Jobs</h3>
-    <p class="cat-link" data-category="Accounting">Accounting</p>
-    <p class="cat-link" data-category="Business">Business</p>
-    <p class="cat-link" data-category="Customer Service">Customer Service</p>
-    <p class="cat-link" data-category="Food">Food</p>
-    <p class="cat-link" data-category="Writing">Writing</p>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+      <span class="category-icon">💼</span>
+      <h3>Jobs</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Accounting">Accounting</a>
+      <a class="cat-link" data-category="Business">Business</a>
+      <a class="cat-link" data-category="Customer Service">Customer Service</a>
+      <a class="cat-link" data-category="Food">Food</a>
+      <a class="cat-link" data-category="Writing">Writing</a>
+    </div>
   </div>
 
-  <div class="category-card">
-    <h3>Gigs</h3>
-    <p class="cat-link" data-category="Creative">Creative</p>
-    <p class="cat-link" data-category="Event">Event</p>
-    <p class="cat-link" data-category="Labor">Labor</p>
-    <p class="cat-link" data-category="Talent">Talent</p>
-    <p class="cat-link" data-category="Writing">Writing</p>
-  </div>
-
-  <div class="category-card blank-card">
-    <h3 class="cat-link" data-category="Resumes">Resumes</h3>
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+      <span class="category-icon">⚡</span>
+      <h3>Gigs</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Creative">Creative</a>
+      <a class="cat-link" data-category="Event">Event</a>
+      <a class="cat-link" data-category="Labor">Labor</a>
+      <a class="cat-link" data-category="Talent">Talent</a>
+      <a class="cat-link" data-category="Writing">Writing</a>
+    </div>
   </div>
 </div>
 </main>
