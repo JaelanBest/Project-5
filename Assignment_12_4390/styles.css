@@ -264,11 +264,10 @@ body:not(.dark) .mode-btn::after {
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1600px;
 }
 
 .category-card-wrapper {
@@ -1127,8 +1126,19 @@ button:disabled {
   display: block;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mobile-menu-header {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .mobile-search {
@@ -1138,45 +1148,46 @@ button:disabled {
 }
 
 .mobile-search input {
-  padding: 0.6rem 0.75rem;
+  padding: 0.65rem 1rem;
   border: 0.1rem solid var(--border);
   background: var(--panel);
   color: var(--text);
-  border-radius: 0.25rem;
-  font-size: 0.9rem;
+  border-radius: 0.35rem;
 }
 
 .mobile-search-btn {
-  padding: 0.6rem 0.75rem;
+  padding: 0.65rem 1rem;
   background: var(--accent);
   color: var(--accent-text);
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   cursor: pointer;
   font-weight: 600;
 }
 
 .mobile-nav {
-  display: grid;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .mobile-nav-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.8rem;
+  gap: 1rem;
+  padding: 1rem;
   background: var(--panel);
+  border-radius: 0.35rem;
   color: var(--text);
   text-decoration: none;
-  border-radius: 0.25rem;
   transition: all 0.2s ease;
   font-weight: 500;
 }
 
 .mobile-nav-link:hover {
-  background: var(--border);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+  transform: translateX(0.25rem);
 }
 
 .mobile-nav-link:focus-visible {
@@ -1187,31 +1198,35 @@ button:disabled {
 .mobile-nav-link.active {
   background: var(--accent);
   color: var(--accent-text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-icon {
   font-size: 1.25rem;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-theme-toggle {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.8rem;
-  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
   background: var(--panel);
+  border: 0.1rem solid var(--border);
+  border-radius: 0.35rem;
   color: var(--text);
-  border: none;
-  border-radius: 0.25rem;
   cursor: pointer;
   font-weight: 500;
+  width: 100%;
   transition: all 0.2s ease;
 }
 
 .mobile-theme-toggle:hover {
-  background: var(--border);
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
 }
 
 .mobile-theme-toggle:focus-visible {

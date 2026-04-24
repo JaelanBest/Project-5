@@ -231,3 +231,27 @@ http-server
 **Assignments**: 12 (Form Validation) & 13 (Accessibility)  
 **Status**: ✅ Complete and Fully Compliant  
 **Last Updated**: April 20, 2026
+
+# Accessibility & Dark Mode Project
+
+## Objective
+This project enhances accessibility and usability by implementing a dark mode toggle, improving color contrast, and ensuring text readability at various sizes.
+
+## Features
+- **Dark Mode Toggle**: Allows users to switch between light and dark themes. The toggle persists the user's preference across sessions.
+- **WCAG AA Compliance**: Ensures color contrast meets accessibility standards.
+- **Responsive Text**: Uses relative units for typography to maintain readability at 200% zoom.
+
+## Setup Instructions
+1. Clone the repository or download the project files.
+2. Open the `index.html` file in your browser.
+3. Use the dark mode toggle in the top-right corner to switch themes.
+
+## Testing
+- Verify that the dark mode toggle works across all pages.
+- Check color contrast using a contrast checker tool.
+- Zoom the browser to 200% and ensure the layout remains intact.
+
+## Notes
+- The project is designed to work in modern browsers.
+- No additional dependencies are required.
