@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queen City List | Charlotte Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="logo-link" href="index.html" aria-label="Go to home page">
+            <span class="logo-mark">◔</span>
+            <span class="logo-text">Queen City List</span>
+          </a>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar">
+            <div class="search-input-group">
+              <input id="searchDesktop" type="text" placeholder="What are you looking for?" class="search-input">
+              <input id="locationDesktop" type="text" placeholder="Location" class="location-input">
+            </div>
+            <button class="search-btn" aria-label="Search">
+              <span class="search-icon">🔍</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="categories.html" class="nav-link">Categories</a>
+            <a href="Listings.html" class="nav-link">Listings</a>
+            <a href="post.html" class="nav-link">Post</a>
+            <a href="account.html" class="nav-link">Account</a>
+          </nav>
+          <button type="button" class="theme-toggle" id="modeToggleDesktop" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+
+        <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="mobile-search">
+          <input id="searchMobile" type="text" placeholder="Search">
+          <input id="locationMobile" type="text" placeholder="Location">
+          <button class="mobile-search-btn">🔍</button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link" data-nav="home">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="categories.html" class="mobile-nav-link" data-nav="categories">
+          <span class="nav-icon">📂</span>
+          <span>Categories</span>
+        </a>
+        <a href="Listings.html" class="mobile-nav-link" data-nav="listings">
+          <span class="nav-icon">📋</span>
+          <span>Listings</span>
+        </a>
+        <a href="post.html" class="mobile-nav-link" data-nav="post">
+          <span class="nav-icon">➕</span>
+          <span>Post</span>
+        </a>
+        <a href="account.html" class="mobile-nav-link" data-nav="account">
+          <span class="nav-icon">👤</span>
+          <span>Account</span>
+        </a>
+        <button type="button" class="mobile-theme-toggle" id="modeToggleMobile" aria-label="Toggle dark mode"><span class="theme-icon">🌙</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent" class="app-shell">
+
+    <section class="main-content">
+      <!-- Premium Hero Section -->
+      <div class="hero-section premium-hero">
+        <div class="hero-backdrop"></div>
+        <div class="hero-container">
+          <div class="hero-content premium">
+            <div class="hero-badge">📍 Charlotte-area marketplace</div>
+            <h1 class="hero-title">Charlotte’s local marketplace</h1>
+            <p class="hero-subtitle">Buy, sell, save, and contact sellers across Charlotte and nearby areas.</p>
+            
+            <div class="hero-trusted-by">
+              <div class="trusted-badge">
+                <span class="badge-icon">🔒</span>
+                <span class="badge-text">Secure Transactions</span>
+              </div>
+              <div class="trusted-badge">
+                <span class="badge-icon">✅</span>
+                <span class="badge-text">Verified Sellers</span>
+              </div>
+              <div class="trusted-badge">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-text">Quick & Easy</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-visual premium">
+            <div class="stats-card premium-stats">
+              <div class="stat-item premium">
+                <div class="stat-number-large" id="homeTotalListings">0</div>
+                <div class="stat-label">Actual Listings</div>
+              </div>
+              <div class="stat-item premium">
+                <div class="stat-number-large" id="homeCategoryTotal">0</div>
+                <div class="stat-label">Categories</div>
+              </div>
+              <div class="stat-item premium">
+                <div class="stat-number-large" id="homeCityTotal">0</div>
+                <div class="stat-label">Local Areas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Listings Section -->
+      <div class="featured-listings-section">
+        <div class="section-header">
+          <h2 class="section-title">Hot Deals This Week</h2>
+          <p class="section-subtitle">Check out the newest and most popular listings</p>
+          <a href="Listings.html" class="view-all-link">View All Listings →</a>
+        </div>
+        <div id="featuredListingsContainer" class="featured-listings-grid"></div>
+      </div>
+
+      <!-- Quick Categories -->
+      <div class="quick-categories-section">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="quick-categories-grid">
+          <a href="Listings.html?category=Bikes" class="quick-category">
+            <div class="quick-category-icon">🚲</div>
+            <h3>Bikes</h3>
+            <span class="category-count" data-count-category="Bikes">0 items</span>
+          </a>
+          <a href="Listings.html?category=Electronics" class="quick-category">
+            <div class="quick-category-icon">💻</div>
+            <h3>Electronics</h3>
+            <span class="category-count" data-count-category="Electronics">0 items</span>
+          </a>
+          <a href="Listings.html?category=Furniture" class="quick-category">
+            <div class="quick-category-icon">🪑</div>
+            <h3>Furniture</h3>
+            <span class="category-count" data-count-category="Furniture">0 items</span>
+          </a>
+          <a href="Listings.html?category=Jobs" class="quick-category">
+            <div class="quick-category-icon">💼</div>
+            <h3>Jobs</h3>
+            <span class="category-count" data-count-category="Jobs">0 opportunities</span>
+          </a>
+          <a href="Listings.html?category=Services" class="quick-category">
+            <div class="quick-category-icon">🔧</div>
+            <h3>Services</h3>
+            <span class="category-count" data-count-category="Services">0 professionals</span>
+          </a>
+          <a href="categories.html" class="quick-category">
+            <div class="quick-category-icon">📂</div>
+            <h3>All Categories</h3>
+            <span class="category-count">Browse all</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Why Choose Us Section -->
+      <div class="why-choose-section">
+        <h2 class="section-title">Why Choose Queen City List?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🌍</div>
+            <h3>Local Community</h3>
+            <p>Connect with buyers and sellers in your area. Build trust through personal connections and local support.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3>Safe & Secure</h3>
+            <p>Our verified seller program and secure payment options protect both buyers and sellers every step of the way.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>Easy to Use</h3>
+            <p>Post listings in minutes. Search, message, and buy with our intuitive and fast mobile-friendly platform.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>No middleman fees. Negotiate directly with buyers and sellers to get the deal you want.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="cta-section">
+        <div class="cta-content">
+          <h2>Ready to Start Buying or Selling?</h2>
+          <p>Join thousands of users already trading on Queen City List</p>
+          <div class="cta-buttons">
+            <a href="Listings.html" class="cta-btn primary">Browse Listings</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Queen City List</h3>
+          <p class="footer-description">Your trusted local marketplace for buying, selling, and trading. Connect with your community and discover amazing deals.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="categories.html">Browse Categories</a>
+            <a href="Listings.html">All Listings</a>
+            <a href="account.html">My Account</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Support</h4>
+          <nav class="footer-nav">
+            <a href="#">Help Center</a>
+            <a href="#">Safety Tips</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Popular Categories</h4>
+          <nav class="footer-nav">
+            <a href="Listings.html?category=Bikes">Bikes</a>
+            <a href="Listings.html?category=Electronics">Electronics</a>
+            <a href="Listings.html?category=Furniture">Furniture</a>
+            <a href="Listings.html?category=Clothing">Clothing</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="copyright">&copy; 2026 Queen City List. All rights reserved.</p>
+          <div class="footer-badges">
+            <span class="badge">🔒 Secure</span>
+            <span class="badge">📱 Mobile Friendly</span>
+            <span class="badge">🌟 Trusted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
