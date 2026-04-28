@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings | Queen City List</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="listings">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="logo-link" href="index.html" aria-label="Go to home page">
+            <span class="logo-mark">◔</span>
+            <span class="logo-text">Queen City List</span>
+          </a>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar">
+            <div class="search-input-group">
+              <input id="searchDesktop" type="text" placeholder="Search listings" class="search-input">
+              <input id="locationDesktop" type="text" placeholder="Charlotte area" class="location-input">
+            </div>
+            <button class="search-btn" aria-label="Search"><span class="search-icon">🔍</span></button>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="categories.html" class="nav-link">Categories</a>
+            <a href="Listings.html" class="nav-link">Listings</a>
+            <a href="post.html" class="nav-link">Post</a>
+            <a href="account.html" class="nav-link">Account</a>
+          </nav>
+          <button type="button" class="theme-toggle" id="modeToggleDesktop" aria-label="Toggle dark mode"><span class="theme-icon">🌙</span></button>
+        </div>
+
+        <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="mobile-search">
+          <input id="searchMobile" type="text" placeholder="Search">
+          <input id="locationMobile" type="text" placeholder="Location">
+          <button class="mobile-search-btn">🔍</button>
+        </div>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link" data-nav="home"><span class="nav-icon">🏠</span><span>Home</span></a>
+        <a href="categories.html" class="mobile-nav-link" data-nav="categories"><span class="nav-icon">📂</span><span>Categories</span></a>
+        <a href="Listings.html" class="mobile-nav-link" data-nav="listings"><span class="nav-icon">📋</span><span>Listings</span></a>
+        <a href="post.html" class="mobile-nav-link" data-nav="post"><span class="nav-icon">➕</span><span>Post</span></a>
+        <a href="account.html" class="mobile-nav-link" data-nav="account"><span class="nav-icon">👤</span><span>Account</span></a>
+        <button type="button" class="mobile-theme-toggle" id="modeToggleMobile" aria-label="Toggle dark mode"><span class="theme-icon">🌙</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent" class="app-shell listings-page">
+    <section class="listings-hero figma-box no-extra-post-cta">
+      <div>
+        <p class="eyebrow">Queen City marketplace</p>
+        <h1>Browse real Charlotte-area listings</h1>
+        <p class="helper-text">Search by item or area, save favorites, contact sellers, and filter listings from the map.</p>
+      </div>
+    </section>
+
+    <section class="market-map figma-box" aria-label="Charlotte marketplace coverage map">
+      <div>
+        <h2>Queen City List Map</h2>
+        <p class="helper-text">Serving Charlotte, Concord, Matthews, Gastonia, Huntersville, and nearby communities.</p>
+      </div>
+      <div class="map-actions" aria-label="Map filters">
+        <button type="button" class="map-reset-btn" id="resetMapFilter">Show all areas</button>
+        <span class="map-status" id="mapStatus">Click a marker to filter listings by city.</span>
+      </div>
+      <div id="listingMap" class="interactive-map" aria-label="Interactive map of listings by Charlotte-area city"></div>
+    </section>
+
+    <section class="main-content listings-results" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom-content">
+        <p class="copyright">&copy; 2026 Queen City List. All rights reserved.</p>
+        <div class="footer-badges"><span class="badge">🔒 Secure</span><span class="badge">📱 Mobile Friendly</span><span class="badge">🌟 Trusted</span></div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

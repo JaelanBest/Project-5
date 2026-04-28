@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories | Queen City List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="categories">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="logo-link" href="index.html" aria-label="Go to home page">
+            <span class="logo-mark">◔</span>
+            <span class="logo-text">Queen City List</span>
+          </a>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar">
+            <div class="search-input-group">
+              <input id="searchDesktop" type="text" placeholder="What are you looking for?" class="search-input">
+              <input id="locationDesktop" type="text" placeholder="Location" class="location-input">
+            </div>
+            <button class="search-btn" aria-label="Search">
+              <span class="search-icon">🔍</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="categories.html" class="nav-link">Categories</a>
+            <a href="Listings.html" class="nav-link">Listings</a>
+            <a href="post.html" class="nav-link">Post</a>
+            <a href="account.html" class="nav-link">Account</a>
+          </nav>
+          <button type="button" class="theme-toggle" id="modeToggleDesktop" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+
+        <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="mobile-search">
+          <input id="searchMobile" type="text" placeholder="Search">
+          <input id="locationMobile" type="text" placeholder="Location">
+          <button class="mobile-search-btn">🔍</button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link" data-nav="home">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="categories.html" class="mobile-nav-link" data-nav="categories">
+          <span class="nav-icon">📂</span>
+          <span>Categories</span>
+        </a>
+        <a href="Listings.html" class="mobile-nav-link" data-nav="listings">
+          <span class="nav-icon">📋</span>
+          <span>Listings</span>
+        </a>
+        <a href="post.html" class="mobile-nav-link" data-nav="post">
+          <span class="nav-icon">➕</span>
+          <span>Post</span>
+        </a>
+        <a href="account.html" class="mobile-nav-link" data-nav="account">
+          <span class="nav-icon">👤</span>
+          <span>Account</span>
+        </a>
+        <button type="button" class="mobile-theme-toggle" id="modeToggleMobile" aria-label="Toggle dark mode"><span class="theme-icon">🌙</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent" class="app-shell">
+    <div class="categories-grid">
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+      <span class="category-icon">🎉</span>
+      <h3>Community</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Activities">Activities</a>
+      <a class="cat-link" data-category="Childcare">Childcare</a>
+      <a class="cat-link" data-category="Classes">Classes</a>
+      <a class="cat-link" data-category="Groups">Groups</a>
+      <a class="cat-link" data-category="News">News</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+      <span class="category-icon">🔧</span>
+      <h3>Services</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Automotive">Automotive</a>
+      <a class="cat-link" data-category="Beauty">Beauty</a>
+      <a class="cat-link" data-category="Computer">Computer</a>
+      <a class="cat-link" data-category="Creative">Creative</a>
+      <a class="cat-link" data-category="Legal">Legal</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+      <span class="category-icon">💬</span>
+      <h3>Forums</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Advice">Advice</a>
+      <a class="cat-link" data-category="Gaming">Gaming</a>
+      <a class="cat-link" data-category="Music">Music</a>
+      <a class="cat-link" data-category="Tech">Tech</a>
+      <a class="cat-link" data-category="Travel">Travel</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+      <span class="category-icon">🏠</span>
+      <h3>Housing</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Apts">Apts</a>
+      <a class="cat-link" data-category="Rooms">Rooms</a>
+      <a class="cat-link" data-category="Office">Office</a>
+      <a class="cat-link" data-category="Parking">Parking</a>
+      <a class="cat-link" data-category="Storage">Storage</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+      <span class="category-icon">🛍️</span>
+      <h3>For Sale</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Appliances">Appliances</a>
+      <a class="cat-link" data-category="Bikes">Bikes</a>
+      <a class="cat-link" data-category="Electronics">Electronics</a>
+      <a class="cat-link" data-category="Furniture">Furniture</a>
+      <a class="cat-link" data-category="Vehicles">Vehicles</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+      <span class="category-icon">💼</span>
+      <h3>Jobs</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Accounting">Accounting</a>
+      <a class="cat-link" data-category="Business">Business</a>
+      <a class="cat-link" data-category="Customer Service">Customer Service</a>
+      <a class="cat-link" data-category="Food">Food</a>
+      <a class="cat-link" data-category="Writing">Writing</a>
+    </div>
+  </div>
+
+  <div class="category-card-wrapper">
+    <div class="category-card-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+      <span class="category-icon">⚡</span>
+      <h3>Gigs</h3>
+    </div>
+    <div class="category-dropdown-btn" onclick="toggleDropdown(this)">
+      <span>▼</span>
+    </div>
+    <div class="category-dropdown">
+      <a class="cat-link" data-category="Creative">Creative</a>
+      <a class="cat-link" data-category="Event">Event</a>
+      <a class="cat-link" data-category="Labor">Labor</a>
+      <a class="cat-link" data-category="Talent">Talent</a>
+      <a class="cat-link" data-category="Writing">Writing</a>
+    </div>
+  </div>
+</div>
+</main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Queen City List</h3>
+          <p class="footer-description">Your trusted local marketplace for buying, selling, and trading. Connect with your community and discover amazing deals.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="categories.html">Browse Categories</a>
+            <a href="Listings.html">All Listings</a>
+            <a href="account.html">My Account</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Support</h4>
+          <nav class="footer-nav">
+            <a href="#">Help Center</a>
+            <a href="#">Safety Tips</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Popular Categories</h4>
+          <nav class="footer-nav">
+            <a href="Listings.html?category=Bikes">Bikes</a>
+            <a href="Listings.html?category=Electronics">Electronics</a>
+            <a href="Listings.html?category=Furniture">Furniture</a>
+            <a href="Listings.html?category=Clothing">Clothing</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="copyright">&copy; 2026 Queen City List. All rights reserved.</p>
+          <div class="footer-badges">
+            <span class="badge">🔒 Secure</span>
+            <span class="badge">📱 Mobile Friendly</span>
+            <span class="badge">🌟 Trusted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
